@@ -14,7 +14,7 @@ using Test
     
     f(x)=(x-2)^2
     fprime(x)=2*x
-    @test Newtonsroot1(f,fprime,x0=1.0)[1] ≈ 4.0 atol=0.00001
+    @test Newtonsroot1(f,fprime,x0=1.0)[1] ≈ 2.0 atol=0.00001
     
     #TEST 2 WITHOUT DERIVATIVES
     f(x)=x^2
