@@ -50,8 +50,8 @@ using Test
     
     #TEST 6 Maxiter
     f(x)=log(x)-20
-    a=newtonroot(f,x₀=0.2)[1] #Algorithm needs 17 iterations in this case
-    b=newtonroot(f,x₀=0.2,maxiter=5)
+    a=Newtonsroot1(f,x₀=0.2)[1] #Algorithm needs 17 iterations in this case
+    b=Newtonsroot1(f,x₀=0.2,maxiter=5)
     @testset "maxiter" begin
     @test a≈4.851651954097909e8 atol=0.000001 
     @test b==nothing
