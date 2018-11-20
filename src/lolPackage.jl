@@ -21,7 +21,11 @@ function Newtonsroot1(f,f_prime;x0,tol=1e-7,maxiter=1000)
         x_old = x_new
         iter = iter + 1
     end
-    return (value = x_old, error = error, iter = iter)
+     if iter < maxiter+1
+        return (root = x_old, normdiff = error, iter = iter) # A named tuple
+    else
+        return nothing
+    end
 end
 D(f)= x ->ForwardDiff.derivative(f,x)
 
