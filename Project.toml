@@ -1,0 +1,16 @@
+name = "lolPackage"
+uuid = "05e8afb0-eb95-11e8-049e-b1c044b9793f"
+authors = ["anubhavpcjha <anubhavpcjha@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+Expectations = "2fe49d83-0758-5602-8f54-1f90ad0d522b"
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
