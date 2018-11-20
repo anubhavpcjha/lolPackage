@@ -11,8 +11,8 @@ function foo(μ = 1.0, σ = 2.0)
     return E(x -> sin(x))
 end
 
-function Newtonsroot1(f,f_prime;x0,tol=1e-7,maxiter=1000)
-    x_old = x0
+function Newtonsroot1(f,f_prime;xiv,tol=1e-7,maxiter=1000)
+    x_old = xiv
     error = Inf
     iter = 1
     while (error > tol || error < -1*tol) && iter <= maxiter
@@ -29,7 +29,7 @@ function Newtonsroot1(f,f_prime;x0,tol=1e-7,maxiter=1000)
 end
 D(f)= x ->ForwardDiff.derivative(f,x)
 
-Newtonsroot1(f;x0,tol=1e-7,maxiter=1000)= Newtonsroot1(f,D(f);x0=x0,tol=tol,maxiter=maxiter)
+Newtonsroot1(f;xiv,tol=1e-7,maxiter=1000)= Newtonsroot1(f,D(f);xiv=xiv,tol=tol,maxiter=maxiter)
 
 
 export foo, Newtonsroot1
