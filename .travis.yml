@@ -13,4 +13,4 @@ matrix:
 notifications:
   email: false
 after_success:
-  - julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
+  - julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())';CODECOV_TOKEN="2a6ce8ad-5930-44cb-ae41-61e93bb384ba"
