@@ -6,14 +6,14 @@ using Test
     #TEST 1 WITH DERIVATIVES
     f(x)=x^2
     fprime(x)=2*x
-    @test Newtonsroot1(f,fprime,xiv=1.0)[1]≈0.0 atol=0.00001
+    @test Newtonsroot1(f,fprime,xiv=0.1)[1]≈0.0 atol=0.00001
     
     f(x)=x^2-16
     fprime(x)=2*x
-    @test Newtonsroot1(f,fprime,xiv=1.0)[1]≈4.0 atol=0.00001
+    @test Newtonsroot1(f,fprime,xiv=3.1)[1]≈4.0 atol=0.00001
     
     f(x)=(x-2)^2
-    fprime(x)=2*x
+    fprime(x)=2*(x-2)
     @test Newtonsroot1(f,fprime,xiv=1.0)[1]≈2.0 atol=0.00001
     
     #TEST 2 WITHOUT DERIVATIVES
