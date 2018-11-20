@@ -1,7 +1,7 @@
 using lolPackage
 using Test
 
-@testset "lolPackage.jl" begin
+
     
     #TEST 1 WITH DERIVATIVES
     f(x)=x^2
@@ -61,4 +61,4 @@ using Test
     
     
     
-end
+
